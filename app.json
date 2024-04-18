@@ -1,0 +1,20 @@
+{
+  "name": "OtpSellBot",
+  "description": "Desription of your application",
+  "keywords": ["python", "pyrogram", "gtts"],
+  "scripts": {
+    "postdeploy": "python voipseller.py"
+  },
+  "env": {
+    "PYTHONUNBUFFERED": "true"
+  },
+  "addons": [
+    // Add any required add-ons here
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "stack": "heroku-22"
+}
