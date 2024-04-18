@@ -44,7 +44,7 @@ async def start_command(client, message):
     [InlineKeyboardButton(text = '💳 Acquista VoIP 💳', callback_data = 'homecompra')],
     [InlineKeyboardButton(text = '⚙️ Pannello Admin ⚙️', callback_data = 'pannellodiamministrazione')],
     ])
-        await app.send_message(chat_id = message.chat.id, text =  f'''Ciao, benvenuto nel tuo bot''', parse_mode = "HTML", reply_markup = start_btn)  
+        await app.send_message(chat_id = message.chat.id, text =  f'''Ciao, benvenuto nel tuo bot''', parse_mode = "markdown", reply_markup = start_btn)  
 
 @app.on_callback_query(callback_data_filter("home"))
 def homesdfas(_, query):
