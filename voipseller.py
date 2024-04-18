@@ -25,7 +25,7 @@ app = Client(
     api_id =  23907288,
     api_hash = "f9a47570ed19aebf8eb0f0a5ec1111e5",
     bot_token = "7089762996:AAHYXjKsetKXvF3t078gE3OoZ6w5HaBnREE")
-phoneAPI = ''
+phoneAPI = '3f3d197dec724ff02d394776f8515c87'
 admin_id = [6464246531]
 Session.notice_displayed = True
 print("OK")
