@@ -103,18 +103,20 @@ async def francia_tg(message, query):
     global idutente
     global numero
     response = requests.get('https://api.sms-activate.org/stubs/handler_api.php?api_key=' + phoneAPI + '&action=getNumber&service=tg&ref=1194982&country=78').text
-    if ":" not in response:
-        Exception(response)
-    number = response.split(':')[2]
-    id = response.split(':')[1]
-    pass
-    print(f'Nuovo acquisto da {query.from_user.id} | {id} | {number}')
-    idutente = f'{query.from_user.id}'
-    idnumero = f'{id}'
-    numero = f'{number}'
-    await query.message.edit(text =  f'''**✅ Numero acquistato** | ({id})
+    if "NO_BALANCE" in response:
+        query.answer('We are ran out of funds please wait and try again after...')
+    else:
+        if ":" not in response:
+            raise Exception(response)
+        number = response.split(':')[2]
+        id = response.split(':')[1]
+        print(f'Nuovo acquisto da {query.from_user.id} | {id} | {number}')
+        idutente = f'{query.from_user.id}'
+        idnumero = f'{id}'
+        numero = f'{number}'
+        await query.message.edit(text=f'''✅ Numero acquistato | ({id})
 
-☎️ Numero: +{number} !''') 
+☎️ Numero: +{number} !''')
     await coppa(query, message)
 
 @app.on_callback_query(callback_data_filter("russia_tg"))
