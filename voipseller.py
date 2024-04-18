@@ -22,11 +22,11 @@ Filters=filters
 
 app = Client(
     "process",
-    api_id =  ,
-    api_hash = "",
-    bot_token = "")
+    api_id =  23907288,
+    api_hash = "f9a47570ed19aebf8eb0f0a5ec1111e5",
+    bot_token = "7089762996:AAHYXjKsetKXvF3t078gE3OoZ6w5HaBnREE")
 phoneAPI = ''
-admin_id = []
+admin_id = [6464246531]
 Session.notice_displayed = True
 print("OK")
 
